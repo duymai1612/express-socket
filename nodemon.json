@@ -1,0 +1,11 @@
+{
+  "watch": [
+    ".",
+    "bin"
+  ],
+  "ignore": [
+    "dist/*"
+  ],
+  "ext": "js",
+  "exec": "DEBUG=express-socket:* npm start"
+}
