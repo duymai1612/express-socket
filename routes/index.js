@@ -8,7 +8,12 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/chat', function (req, res, next) {
-  res.sendFile(path.join(__dirname, '../views/chat.html'))
+  const { bootstrap } = req.query
+  if (bootstrap) {
+    res.sendFile(path.join(__dirname, '../views/chat.bootstraped.html'))
+  } else {
+    res.sendFile(path.join(__dirname, '../views/chat.html'))
+  }
 });
 
 module.exports = router;
